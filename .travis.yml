@@ -25,8 +25,8 @@ deploy:
   region: "us-west-2"
   app: "node-complex"
   env: "NodeFrontend-env"
-  bucket_name: "elasticbeanstalk-ca-central-1-180405251853"
-  bucket_path: "node-frontend"
+  bucket_name: "elasticbeanstalk-us-west-2-180405251853"
+  bucket_path: "node-complex"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
