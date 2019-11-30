@@ -20,15 +20,15 @@ after_success:
   - docker push darrellsnow/multi-worker
 
 
-deploy:
-  provider: elasticbeanstalk
-  region: "us-west-2"
-  app: "node-complex"
-  env: "NodeFrontend-env"
-  bucket_name: "elasticbeanstalk-us-west-2-180405251853"
-  bucket_path: "node-complex"
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+#deploy:
+#  provider: elasticbeanstalk
+#  region: "us-west-2"
+#  app: "node-complex"
+#  env: "NodeFrontend-env"
+#  bucket_name: "elasticbeanstalk-us-west-2-180405251853"
+#  bucket_path: "node-complex"
+#  on:
+#    branch: master
+#  access_key_id: $AWS_ACCESS_KEY
+#  secret_access_key:
+#    secure: "$AWS_SECRET_KEY"
