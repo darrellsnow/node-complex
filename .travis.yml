@@ -9,15 +9,15 @@ script:
   - docker run -e CI=true darrellsnow/react-test npm test
 
 after_success:
-  - docker build -t darrellsnow/node-complex-client ./client
+  - docker build -t darrellsnow/multi-client ./client
   - docker build -t darrellsnow/node-complex-nginx ./nginx
-  - docker build -t darrellsnow/node-complex-server ./server
-  - docker build -t darrellsnow/node-complex-worker ./worker
+  - docker build -t darrellsnow/multi-server ./server
+  - docker build -t darrellsnow/multi-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push darrellsnow/node-complex-client
+  - docker push darrellsnow/multi-client
   - docker push darrellsnow/node-complex-nginx
-  - docker push darrellsnow/node-complex-server
-  - docker push darrellsnow/node-complex-worker
+  - docker push darrellsnow/multi-server
+  - docker push darrellsnow/multi-worker
 
 
 deploy:
